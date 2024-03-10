@@ -1,0 +1,119 @@
+.nav-item{
+    font-size: 15px;
+    text-transform: uppercase;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-style: normal;
+}
+
+.dropdown-item{
+    letter-spacing: .1em;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.madimi-one-regular {
+   font-family: 'Roboto', Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.my_footer{
+    background-color: green;
+    color: white;
+}
+
+.my_footer p{
+    margin: 0;
+    padding-top:10px;
+    padding-bottom:10px;
+    font-size : 18px;
+}
+
+/*** category page***/
+
+.my_row_class{
+    padding-top:15px;
+
+}
+
+.my_row_class .mx_auto{
+    color: black;
+    font-size : 14px;
+}
+
+.my_image{
+    width:100%;
+    height=200cm;
+}
+
+.my_title{
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+}
+
+.my_image .my_image_padding{
+    padding:5px;
+}
+.text-justify {
+    text-align: justify !important;
+}
+
+.my_bottom_margin{
+    margin-bottom:10px;
+}
+.card-body h4{
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+}
+/*** product page ***/
+.my_prod_row_class{
+    padding-top:15px;
+    padding-bottom:20px;
+
+}
+.my_prod_row_class .mx_auto{
+    color: black;
+    font-size : 12px;
+    text-decoration:none;
+}
+
+.my_prod_title{
+     font-size : 14px;
+     text-transform: uppercase;
+     letter-spacing: .1em;
+     padding-top:15px;
+      padding-bottom:20px;
+}
+.my_prod_text{
+    padding-right: 20px;
+
+}
+
+/*** search html ***/
+.my_search_text{
+    padding-top:15px;
+}
+
+/*** cart html ***/
+.my_custom-table{
+    min-width: 400px;
+    font-size:14px;
+}
+.my_custom-thead{
+    font-weight:normal;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    background-color: blue !important;
+}
+.custom_a{
+    text-decoration:none;
+}
+.custom_icon{
+    text-decoration:none;
+    color: blue !important;
+}
+.my_custom_button{
+    margin-bottom:5px;
+}

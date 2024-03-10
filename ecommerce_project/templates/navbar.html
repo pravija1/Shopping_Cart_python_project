@@ -1,0 +1,53 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item dropdown {% if 'ecommerce_app' in request.path %} active {% endif %}">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Our Collections
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="{% url 'ecommerce_app:allProductCat' %}">All Products</a></li>
+             {% for link in links %}
+              <li><a class="dropdown-item" href="{{ link.get_url }}">{{ link.name }}</a></li>
+              {% endfor %}
+          </ul>
+        </li>
+        {% if item_count > 0 %}
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'cart:cart_detail' %}"><i class="fa-solid fa-cart-shopping"></i>( {{ item_count }} items )</a>
+        </li>
+        {% endif %}
+      </ul>
+      <form class="d-flex" action="{% url 'search_app:SearchResult' %}" method="get">
+        {% csrf_token %}
+        <input class="form-control me-2" type="search" placeholder="Search product" name="q">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<!--old nav code is replaced in above with bootstrap good nav bar-->
+<!--<nav>-->
+<!--    <ul>-->
+<!--&lt;!&ndash;        list categories using url , using ul command&ndash;&gt;-->
+<!--        <li><a href ="{% url 'ecommerce_app:allProductCat' %}">All Products</a>-->
+<!--&lt;!&ndash;            for this allproductcat, dont forget to create a function for the same in views.py&ndash;&gt;-->
+<!--        </li>-->
+<!--        {% for link in links %}-->
+<!--        <li><a href= "{{ link.get_url }}">{{ link.name }}</a></li>-->
+<!--&lt;!&ndash;        create this get_url in models.py&ndash;&gt;-->
+<!--        {% endfor %}-->
+<!--        <li>-->
+<!--            Your Cart()-->
+<!--        </li>-->
+
+<!--    </ul>-->
+<!--</nav>-->
